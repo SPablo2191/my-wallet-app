@@ -10,31 +10,68 @@ import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.SideEffect
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
 
 private val DarkColorScheme = darkColorScheme(
-    primary = Purple80,
-    secondary = PurpleGrey80,
-    tertiary = Pink80
+    primary = Blue80, // in dark theme, has to be bright
+    onPrimary = Blue20, // contrast with primary
+    primaryContainer = Blue30, // container
+    onPrimaryContainer = Blue90, // text on container
+    inversePrimary = Blue90, // contrast with primary as subtitle
+    secondary = DarkBlue80,
+    onSecondary = DarkBlue20,
+    secondaryContainer  = DarkBlue30,
+    onSecondaryContainer  = DarkBlue90,
+    tertiary = Violet80,
+    onTertiary = Violet20,
+    tertiaryContainer  = Violet30,
+    onTertiaryContainer  = Violet90,
+    error = Red80,
+    onError = Red20,
+    errorContainer = Red30,
+    onErrorContainer = Red90,
+    background = Grey10,
+    onBackground = Grey90,
+    surface = BlueGrey30, // background (the whole surface of the app)
+    onSurface = BlueGrey80,
+    inverseSurface = Grey90,
+    inverseOnSurface = Grey10,
+    surfaceVariant = BlueGrey30,
+    onSurfaceVariant = BlueGrey80,
+    outline = BlueGrey80
 )
 
 private val LightColorScheme = lightColorScheme(
-    primary = Purple40,
-    secondary = PurpleGrey40,
-    tertiary = Pink40
-
-    /* Other default colors to override
-    background = Color(0xFFFFFBFE),
-    surface = Color(0xFFFFFBFE),
-    onPrimary = Color.White,
+    primary = Blue40, // in light theme, has to be dark
+    onPrimary = Color.White, // contrast with primary
+    primaryContainer = Blue90, // container
+    onPrimaryContainer = Blue10, // text on container
+    inversePrimary = Blue80, // contrast with primary as subtitle
+    secondary = DarkBlue40,
     onSecondary = Color.White,
+    secondaryContainer  = DarkBlue90,
+    onSecondaryContainer  = DarkBlue10,
+    tertiary = Violet40,
     onTertiary = Color.White,
-    onBackground = Color(0xFF1C1B1F),
-    onSurface = Color(0xFF1C1B1F),
-    */
+    tertiaryContainer  = Violet90,
+    onTertiaryContainer  = Violet10,
+    error = Red40,
+    onError = Color.White,
+    errorContainer = Red90,
+    onErrorContainer = Red10,
+    background = Grey99,
+    onBackground = Grey10,
+    surface = BlueGrey90, // background (the whole surface of the app)
+    onSurface = BlueGrey30,
+    inverseSurface = Grey20,
+    inverseOnSurface = Grey95,
+    surfaceVariant = BlueGrey90,
+    onSurfaceVariant = BlueGrey30,
+    outline = BlueGrey50
 )
 
 @Composable
@@ -65,6 +102,7 @@ fun MyWalletTheme(
     MaterialTheme(
         colorScheme = colorScheme,
         typography = Typography,
+        shapes = Shapes,
         content = content
     )
 }
