@@ -1,4 +1,4 @@
-package com.example.mywallet.components.cards.amountCard
+package com.example.mywallet.ui.components.cards.accountCard
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -14,9 +14,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun AmountCard(
+fun AccountCard(
     title: String,
-    amount: Double,
+    amount: String,
     modifier: Modifier = Modifier
 ) {
     Card(
@@ -38,6 +38,6 @@ fun AmountCard(
 
 @Preview
 @Composable
-fun AmountCardPreview() {
-    AmountCard(title = "Caja Chica", amount = 180000.0)
+fun AccountCardPreview() {
+    AccountCard(title = "Caja Chica", amount = "180000.0")
 }
