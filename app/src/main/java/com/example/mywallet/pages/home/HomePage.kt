@@ -22,10 +22,13 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import com.example.mywallet.R
 import com.example.mywallet.ui.components.accountListItem.AccountListItem
 import com.example.mywallet.ui.components.accountListItem.ShimmerListItem
+import com.example.mywallet.ui.components.animatedIcon.AnimatedIcon
 
 @OptIn(ExperimentalLayoutApi::class)
 @ExperimentalMaterial3Api
@@ -67,6 +70,10 @@ fun Home(){
             ShimmerListItem(isLoading = viewModel.accounts.isEmpty(), contentAfterLoading = {
                 AccountListItem(accounts = viewModel.accounts)
             })
+            AnimatedIcon(
+                emptyIcon = painterResource(id = R.drawable.blood),
+                fullIcon = painterResource(id = R.drawable.blood_completed)
+            )
         }
     }
 }

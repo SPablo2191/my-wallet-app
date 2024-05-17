@@ -17,61 +17,53 @@ import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
 
 private val DarkColorScheme = darkColorScheme(
-    primary = Blue80, // in dark theme, has to be bright
-    onPrimary = Blue20, // contrast with primary
-    primaryContainer = Blue30, // container
-    onPrimaryContainer = Blue90, // text on container
-    inversePrimary = Blue90, // contrast with primary as subtitle
-    secondary = DarkBlue80,
-    onSecondary = DarkBlue20,
-    secondaryContainer  = DarkBlue30,
-    onSecondaryContainer  = DarkBlue90,
-    tertiary = Violet80,
-    onTertiary = Violet20,
-    tertiaryContainer  = Violet30,
-    onTertiaryContainer  = Violet90,
+    primary = Orange80, // in dark theme, has to be bright
+    onPrimary = Orange20, // contrast with primary
+    primaryContainer = Orange30, // container
+    onPrimaryContainer = Orange90, // text on container
+    inversePrimary = Orange90, // contrast with primary as subtitle
+    secondary = DarkOrange80,
+    onSecondary = DarkOrange20,
+    secondaryContainer  = DarkOrange30,
+    onSecondaryContainer  = DarkOrange90,
     error = Red80,
     onError = Red20,
     errorContainer = Red30,
     onErrorContainer = Red90,
     background = Grey10,
     onBackground = Grey90,
-    surface = BlueGrey30, // background (the whole surface of the app)
-    onSurface = BlueGrey80,
+    surface = OrangeGrey30, // background (the whole surface of the app)
+    onSurface = OrangeGrey80,
     inverseSurface = Grey90,
     inverseOnSurface = Grey10,
-    surfaceVariant = BlueGrey30,
-    onSurfaceVariant = BlueGrey80,
-    outline = BlueGrey80
+    surfaceVariant = OrangeGrey30,
+    onSurfaceVariant = OrangeGrey80,
+    outline = OrangeGrey80
 )
 
 private val LightColorScheme = lightColorScheme(
-    primary = Blue40, // in light theme, has to be dark
+    primary = Orange40, // in light theme, has to be dark
     onPrimary = Color.White, // contrast with primary
-    primaryContainer = Blue90, // container
-    onPrimaryContainer = Blue10, // text on container
-    inversePrimary = Blue80, // contrast with primary as subtitle
-    secondary = DarkBlue40,
+    primaryContainer = Orange90, // container
+    onPrimaryContainer = Orange10, // text on container
+    inversePrimary = Orange80, // contrast with primary as subtitle
+    secondary = DarkOrange40,
     onSecondary = Color.White,
-    secondaryContainer  = DarkBlue90,
-    onSecondaryContainer  = DarkBlue10,
-    tertiary = Violet40,
-    onTertiary = Color.White,
-    tertiaryContainer  = Violet90,
-    onTertiaryContainer  = Violet10,
+    secondaryContainer  = DarkOrange90,
+    onSecondaryContainer  = DarkOrange10,
     error = Red40,
     onError = Color.White,
     errorContainer = Red90,
     onErrorContainer = Red10,
     background = Grey99,
     onBackground = Grey10,
-    surface = BlueGrey90, // background (the whole surface of the app)
-    onSurface = BlueGrey30,
+    surface = OrangeGrey90, // background (the whole surface of the app)
+    onSurface = OrangeGrey30,
     inverseSurface = Grey20,
     inverseOnSurface = Grey95,
-    surfaceVariant = BlueGrey90,
-    onSurfaceVariant = BlueGrey30,
-    outline = BlueGrey50
+    surfaceVariant = OrangeGrey90,
+    onSurfaceVariant = OrangeGrey30,
+    outline = OrangeGrey50
 )
 
 @Composable
